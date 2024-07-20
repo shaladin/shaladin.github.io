@@ -1,10 +1,14 @@
 // const colors = require('tailwindcss/colors');
 
+const { DEFAULT } = require('@tailwindcss/typography/src/styles');
+
 module.exports = {
   prefix: '',
   mode: 'jit',
   important: false,
-  content: ['./src/**/*.{html,ts}'],
+  content: [
+    './src/**/*.{html,ts}'
+  ],
   darkMode: 'class',
   theme: {
     extend: {
@@ -84,6 +88,14 @@ module.exports = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
+        surface: {
+          DEFAULT: 'hsl(var(--surface))',
+          container: 'hsl(var(--surface-container))',
+        },
+        on: {
+          DEFAULT: 'hsl(var(--foreground))',
+          surface: 'hsl(var(--on-surface))'
+        }
       },
     },
     fontFamily: {

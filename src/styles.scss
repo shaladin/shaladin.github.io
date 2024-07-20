@@ -12,6 +12,9 @@
     --card-foreground: 240 0% 0%;
     --primary: 347 77% 50%;
     --primary-foreground: 0 0% 100%;
+    --surface: 210 40% 96%;
+    --surface-container: 240 50% 50%;
+    --on-surface: 200 50% 50%;
     --muted: 213 27% 84%;
     --muted-foreground: 215 16% 47%;
     --destructive: 350 100% 40%;
@@ -62,6 +65,10 @@
 
   :root[data-theme='blue'] {
     --primary: 221.2 83.2% 53.3%;
+    // --muted-foreground: 0 0% 85%;
+    --surface: 220 75% 20%;
+    --surface-container: 220 75% 25%;
+    --on-surface: 0 0% 95%;
   }
 
   .dark[data-theme='blue'] {
@@ -76,6 +83,9 @@
     --destructive: 350 100% 40%;
     --destructive-foreground: 210 40% 98%;
     --border: 217.2 32.6% 17.5%;
+    --surface: 222.2 84% 4.9%;
+    --surface-container: 222.2 84% 4.9;
+    --on-surface: 0 0% 90%;
   }
 
   :root[data-theme='orange'] {

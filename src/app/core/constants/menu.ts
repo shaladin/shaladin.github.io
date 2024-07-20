@@ -11,8 +11,31 @@ export class Menu {
           label: 'Dashboard',
           route: '/dashboard',
           children: [
-            { label: 'Nfts', route: '/dashboard/nfts' },
+            // { label: 'Nfts', route: '/dashboard/nfts' },
             // { label: 'Podcast', route: '/dashboard/podcast' },
+            { 
+              label: 'Cashier', 
+              route: '/dashboard/cashier',
+              children: [
+                { label: 'Payment Receive Advance', route: '/dashboard/cashier/receive' },
+                { label: 'Payment Receive Request', route: '/dashboard/cashier/request' }
+              ] 
+            },
+          ],
+        },
+        {
+          icon: 'assets/icons/heroicons/outline/cog.svg',
+          label: 'System Setting',
+          route: '/accounts',
+          children: [
+            {
+              label: 'Account',
+              route: '/accounts/paging',
+            },
+            { 
+              label: 'Roles', 
+              route: '/features/roles' 
+            },
           ],
         },
         {
@@ -38,6 +61,15 @@ export class Menu {
         },
       ],
     },
+    // {
+    //   items: [
+    //     {
+    //       icon: 'assets/icons/heroicons/outline/cog.svg',
+    //       label: 'System Setting',
+    //       route: '/system/settings'
+    //     }
+    //   ]
+    // },
     {
       group: 'Collaboration',
       separator: true,
@@ -55,7 +87,7 @@ export class Menu {
         {
           icon: 'assets/icons/heroicons/outline/users.svg',
           label: 'Users',
-          route: '/users',
+          route: '/accounts/paging-x',
         },
       ],
     },

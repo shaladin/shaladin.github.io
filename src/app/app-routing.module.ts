@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+// import {} from '@shaladin/flytail-angular';
 
 const routes: Routes = [
   {
@@ -14,6 +15,10 @@ const routes: Routes = [
     path: 'errors',
     loadChildren: () => import('./modules/error/error.module').then((m) => m.ErrorModule),
   },
+  // {
+  //   path: 'flytail',
+  //   loadComponent: () => import('@shaladin/flytail-angular').then((c) => c.FlytailAngularComponent)
+  // },
   { path: '**', redirectTo: 'errors/404' },
 ];
 

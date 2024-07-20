@@ -6,6 +6,8 @@ import { AppComponent } from './app/app.component';
 import { AppRoutingModule } from './app/app-routing.module';
 import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
 import { provideAnimations } from '@angular/platform-browser/animations';
+import { NgxIndexedDBModule } from 'ngx-indexed-db';
+import { SchemeConfig } from './app/core/database/scheme.config';
 
 if (environment.production) {
   enableProdMode();
@@ -16,7 +18,10 @@ if (environment.production) {
 }
 
 bootstrapApplication(AppComponent, {
-  providers: [importProvidersFrom(BrowserModule, AppRoutingModule), provideAnimations()],
+  providers: [
+    importProvidersFrom(NgxIndexedDBModule.forRoot(SchemeConfig), BrowserModule, AppRoutingModule), 
+    provideAnimations()
+  ],
 }).catch((err) => console.error(err));
 
 function selfXSSWarning() {

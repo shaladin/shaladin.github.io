@@ -1,5 +1,5 @@
 export interface MenuItem {
-  group: string;
+  group?: string;
   separator?: boolean;
   selected?: boolean;
   active?: boolean;
@@ -9,7 +9,7 @@ export interface MenuItem {
 export interface SubMenuItem {
   icon?: string;
   label?: string;
-  route?: string | null;
+  route?: string | '';
   expanded?: boolean;
   active?: boolean;
   children?: Array<SubMenuItem>;
