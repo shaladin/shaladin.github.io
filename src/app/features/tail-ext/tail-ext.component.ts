@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ViewComponent } from '@shaladin/flytail-angular';
 
 @Component({
   selector: 'app-tail-ext',
@@ -8,6 +7,6 @@ import { ViewComponent } from '@shaladin/flytail-angular';
   templateUrl: './tail-ext.component.html',
   styleUrl: './tail-ext.component.scss'
 })
-export class TailExtComponent extends ViewComponent {
+export class TailExtComponent {
 
 }
